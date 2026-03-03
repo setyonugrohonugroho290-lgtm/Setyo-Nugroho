@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BBQ Paradise | Barbeque Transparan</title>
+    <title>BBQ Paradise · Desktop Edition</title>
     <link rel="stylesheet" href="bootstrap-5.0.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
             background: #0d0d0d url('https://images.unsplash.com/photo-1558030006-450675393e05?w=1600&auto=format') center/cover fixed;
             color: #f0e6d2;
         }
-        /* Efek transparan */
+        /* Efek transparan premium */
         .glass {
             background: rgba(20, 20, 20, 0.7);
             backdrop-filter: blur(12px);
@@ -23,21 +23,24 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
         .navbar {
-            background: rgba(10, 10, 10, 0.8) !important;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #ff8c00;
+            background: rgba(10, 10, 10, 0.85) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid #ff8c00;
+            padding: 16px 0;
         }
         .navbar-brand {
             font-weight: 700;
-            font-size: 2rem;
+            font-size: 2.2rem;
             color: #ff8c00 !important;
-            text-shadow: 0 0 10px #ff4500;
+            text-shadow: 0 0 12px #ff4500;
+            letter-spacing: 1px;
         }
         .nav-link {
             color: #fff !important;
             font-weight: 500;
-            margin: 0 15px;
+            margin: 0 18px;
             position: relative;
+            font-size: 1.1rem;
         }
         .nav-link::after {
             content: '';
@@ -50,136 +53,164 @@
         .nav-link:hover::after {
             width: 100%;
         }
-        /* Banner */
+        /* Banner desktop lebih dramatis */
         .banner {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=1600&auto=format') center/cover no-repeat;
-            height: 90vh;
-            min-height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=1600&auto=format') center/cover no-repeat;
+            height: 85vh;
+            min-height: 700px;
+            margin-top: 76px; /* hindari navbar */
         }
         .banner h1 {
-            font-size: 4.5rem;
+            font-size: 5rem;
             font-weight: 700;
-            text-shadow: 2px 2px 15px #000;
+            text-shadow: 3px 3px 20px #000;
+            letter-spacing: -0.5px;
         }
         .banner .btn-bbq {
             background: #ff8c00;
             border: none;
             color: #000;
             font-weight: 600;
-            padding: 15px 40px;
-            border-radius: 50px;
-            box-shadow: 0 0 20px #ff4500;
+            padding: 16px 50px;
+            border-radius: 60px;
+            box-shadow: 0 0 25px #ff4500;
             transition: all 0.3s;
+            font-size: 1.3rem;
         }
         .banner .btn-bbq:hover {
             background: #ff4500;
             color: #fff;
-            transform: scale(1.05);
-            box-shadow: 0 0 30px #ff4500;
+            transform: scale(1.07);
+            box-shadow: 0 0 35px #ff4500;
         }
-        /* Section divider */
+        /* Container lebih lebar untuk desktop */
+        .container-custom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
         .section-title {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             color: #ff8c00;
-            text-shadow: 2px 2px 10px #ff4500;
-            margin-bottom: 20px;
+            text-shadow: 2px 2px 15px #ff4500;
+            margin-bottom: 25px;
         }
+        /* Card BBQ dengan gambar lebih tinggi & proporsional */
         .card-bbq {
-            background: rgba(30, 30, 30, 0.6);
+            background: rgba(30, 30, 30, 0.65);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 140, 0, 0.5);
-            border-radius: 25px;
+            border-radius: 28px;
             overflow: hidden;
             transition: transform 0.4s, box-shadow 0.4s;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         .card-bbq:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(255, 69, 0, 0.4);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 45px rgba(255, 69, 0, 0.5);
             border-color: #ff4500;
         }
         .card-bbq img {
-            height: 220px;
+            height: 260px;         /* lebih tinggi untuk desktop */
             object-fit: cover;
             border-bottom: 3px solid #ff8c00;
+            width: 100%;
         }
         .card-bbq .card-body {
-            padding: 1.5rem;
+            padding: 1.8rem 1.2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         .card-bbq .card-title {
             font-weight: 700;
             color: #ff8c00;
+            font-size: 1.6rem;
+        }
+        .card-bbq .card-text {
+            flex: 1;
+            font-size: 1rem;
+            color: #ddd;
         }
         .price {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #ff8c00;
+            margin-top: 10px;
         }
         .btn-outline-bbq {
             border: 2px solid #ff8c00;
             color: #ff8c00;
             background: transparent;
-            border-radius: 50px;
-            padding: 12px 30px;
+            border-radius: 60px;
+            padding: 14px 40px;
             font-weight: 600;
+            font-size: 1.2rem;
             transition: all 0.3s;
         }
         .btn-outline-bbq:hover {
             background: #ff8c00;
             color: #000;
-            box-shadow: 0 0 20px #ff8c00;
+            box-shadow: 0 0 25px #ff8c00;
         }
-        /* Pelayanan */
-        .pelayanan {
-            background: transparent;
-        }
+        /* Pelayanan icon lebih besar */
         .pelayanan .glass {
-            padding: 2rem 1rem;
-            border-radius: 30px;
+            padding: 2.5rem 1.5rem;
+            border-radius: 40px;
             transition: 0.3s;
         }
         .pelayanan .glass:hover {
-            background: rgba(255, 140, 0, 0.3);
+            background: rgba(255, 140, 0, 0.25);
             border-color: #ff4500;
         }
         .icon-circle {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             background: rgba(255, 140, 0, 0.2);
-            border: 2px solid #ff8c00;
-            font-size: 2.5rem;
+            border: 3px solid #ff8c00;
+            font-size: 3.2rem;
             color: #ff8c00;
             transition: 0.3s;
         }
         .icon-circle:hover {
             background: #ff8c00;
             color: #000;
-            transform: rotate(10deg);
+            transform: rotate(8deg) scale(1.05);
         }
-        /* Testimoni */
+        /* Testimoni desktop : card lebih lega */
         .testimony .glass {
-            padding: 25px;
-            border-radius: 30px;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(8px);
-            border-left: 5px solid #ff8c00;
+            padding: 30px;
+            border-radius: 35px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            border-left: 6px solid #ff8c00;
+            height: 100%;
+        }
+        .testimony .quote-icon {
+            font-size: 4rem;
+            line-height: 1;
+            margin-bottom: -10px;
         }
         .stars {
             color: #ff8c00;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
-        /* Form reservasi */
+        /* Form reservasi lebih elegan */
         .form-control-bbq {
             background: rgba(255,255,255,0.1);
             border: 1px solid #ff8c00;
             color: #fff;
-            border-radius: 50px;
-            padding: 12px 20px;
+            border-radius: 60px;
+            padding: 14px 25px;
+            font-size: 1.1rem;
         }
         .form-control-bbq:focus {
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.7);
             border-color: #ff4500;
-            box-shadow: 0 0 15px #ff8c00;
+            box-shadow: 0 0 20px #ff8c00;
             color: #fff;
         }
         .btn-bbq {
@@ -187,40 +218,67 @@
             border: none;
             color: #000;
             font-weight: 600;
-            border-radius: 50px;
-            padding: 12px 30px;
+            border-radius: 60px;
+            padding: 14px 35px;
+            font-size: 1.2rem;
             transition: 0.3s;
         }
         .btn-bbq:hover {
             background: #ff4500;
             color: #fff;
-            box-shadow: 0 0 20px #ff4500;
+            box-shadow: 0 0 25px #ff4500;
         }
-        /* Footer */
         .footer {
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(5px);
-            border-top: 2px solid #ff8c00;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(6px);
+            border-top: 3px solid #ff8c00;
         }
         .social-icon {
             color: #ff8c00;
-            font-size: 2rem;
+            font-size: 2.5rem;
             transition: 0.3s;
         }
         .social-icon:hover {
             color: #ff4500;
-            transform: scale(1.2);
+            transform: scale(1.2) rotate(3deg);
         }
         hr {
             background: #ff8c00;
+            height: 2px;
+            opacity: 0.5;
+        }
+        /* penyesuaian margin antar section */
+        section, .container-fluid {
+            padding-top: 80px !important;
+            padding-bottom: 80px !important;
+        }
+        #home.banner {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        /* navbar fixed tidak menimpa konten */
+        body {
+            padding-top: 76px;
+        }
+        .banner {
+            margin-top: -76px; /* kompensasi padding body */
+        }
+        /* responsif untuk layar sangat lebar */
+        @media (min-width: 1600px) {
+            .container-custom, .container {
+                max-width: 1520px;
+            }
+            .banner h1 {
+                font-size: 6rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar Transparan -->
+    <!-- Navbar transparan (tetap mewah) -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
+        <div class="container container-custom">
             <a class="navbar-brand" href="#">🔥 BBQ PARADISE</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -232,55 +290,55 @@
                     <li class="nav-item"><a class="nav-link" href="#menu">Menu BBQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="#testimony">Testimoni</a></li>
                     <li class="nav-item"><a class="nav-link" href="#reservasi">Reservasi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart"></i> Keranjang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-cart-fill me-1"></i>Keranjang</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Banner BBQ -->
+    <!-- Banner BBQ (fullscreen hero) -->
     <div class="container-fluid banner d-flex align-items-center justify-content-center" id="home">
-        <div class="container text-center">
-            <p class="text-uppercase text-warning fw-bold mb-3">Smoke & Grill</p>
-            <h1 class="text-white display-1 fw-bold">SELAMAT DATANG DI SURGA BARBEQUE</h1>
+        <div class="container container-custom text-center">
+            <p class="text-uppercase text-warning fw-bold mb-3 fs-4">Smoke & Grill</p>
+            <h1 class="text-white display-1 fw-bold">SURGA BARBEQUE<br>DI TENGAH KOTA</h1>
             <div class="d-flex justify-content-center">
-                <div style="width: 100px; height: 3px; background: #ff8c00; margin: 20px;"></div>
+                <div style="width: 150px; height: 4px; background: #ff8c00; margin: 25px;"></div>
             </div>
-            <p class="text-white-50 fs-4 mb-5">Bakar, Makan, Nikmati. Daging berkualitas, bumbu rahasia.</p>
-            <div class="col-md-6 offset-md-3">
+            <p class="text-white-50 fs-3 mb-5">Bakar, Makan, Nikmati. Daging premium, bumbu rahasia.</p>
+            <div class="col-lg-8 offset-lg-2">
                 <div class="input-group input-group-lg">
-                    <select class="form-select bg-transparent text-white border-warning" style="backdrop-filter: blur(5px);">
-                        <option selected>Pilih Menu Bakar</option>
-                        <option value="1">Iga Bakar</option>
-                        <option value="2">Sosis BBQ</option>
-                        <option value="3">Ayam Bakar</option>
-                        <option value="4">Steak Wagyu</option>
+                    <select class="form-select bg-transparent text-white border-warning" style="backdrop-filter: blur(8px); font-size: 1.2rem; padding: 16px;">
+                        <option selected>Pilih Menu Bakar Favorit</option>
+                        <option value="1">Iga Bakar Madu</option>
+                        <option value="2">Sosis BBQ Bratwurst</option>
+                        <option value="3">Ayam Bakar Pedas</option>
+                        <option value="4">Steak Wagyu A5</option>
                     </select>
-                    <button class="btn btn-bbq" type="button">Bakar Sekarang</button>
+                    <button class="btn btn-bbq px-5" type="button">Bakar Sekarang</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Promo Spesial BBQ -->
+    <!-- Promo Spesial (desktop: card lebih tinggi) -->
     <div class="container-fluid py-5" id="promo">
-        <div class="container">
+        <div class="container container-custom">
             <h2 class="section-title text-center">🔥 Promo Spesial Bakar-Bakar</h2>
-            <p class="text-center text-white-50 mb-5">Nikmati diskon spesial untuk menu barbeque pilihan</p>
-            <div class="row g-4 justify-content-center">
+            <p class="text-center text-white-50 mb-5 fs-4">Diskon membara untuk menu pilihan, hanya minggu ini</p>
+            <div class="row g-5">
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&auto=format" alt="Iga Bakar">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&auto=format" alt="Iga Bakar">
                         <div class="card-body">
                             <h5 class="card-title">Iga Bakar Madu</h5>
-                            <p class="card-text">Iga sapi empuk dengan glaze madu dan smokey.</p>
+                            <p class="card-text">Iga sapi empuk dengan glaze madu dan smoky.</p>
                             <p class="price">Rp 65.000</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=500&auto=format" alt="Sosis Bakar">
+                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=700&auto=format" alt="Sosis Bakar">
                         <div class="card-body">
                             <h5 class="card-title">Sosis BBQ</h5>
                             <p class="card-text">Sosis sapi panggang dengan saus barbeque khas.</p>
@@ -290,7 +348,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=500&auto=format" alt="Ayam Bakar">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=700&auto=format" alt="Ayam Bakar">
                         <div class="card-body">
                             <h5 class="card-title">Ayam Bakar Pedas</h5>
                             <p class="card-text">Ayam kampung bakar dengan sambal pencit.</p>
@@ -300,7 +358,7 @@
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1558030006-450675393e05?w=500&auto=format" alt="Steak">
+                        <img src="https://images.unsplash.com/photo-1558030006-450675393e05?w=700&auto=format" alt="Steak">
                         <div class="card-body">
                             <h5 class="card-title">Steak Wagyu</h5>
                             <p class="card-text">Wagyu grade A5 dibakar sempurna dengan butter.</p>
@@ -309,295 +367,288 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
-                <button class="btn btn-outline-bbq btn-lg">Lihat Semua Promo</button>
+            <div class="text-center mt-5 pt-3">
+                <button class="btn btn-outline-bbq btn-lg">Jelajahi Semua Promo</button>
             </div>
         </div>
     </div>
 
-    <!-- Kami Melayani (dengan glass) -->
+    <!-- Kami Melayani (ikon lebih besar) -->
     <div class="container-fluid py-5 pelayanan">
-        <div class="container">
+        <div class="container container-custom">
             <h2 class="section-title text-center">Kami Melayani</h2>
             <div class="row justify-content-center text-center g-4">
                 <div class="col-sm-6 col-lg-3">
                     <div class="glass p-4">
-                        <div class="d-flex justify-content-center mb-3">
+                        <div class="d-flex justify-content-center mb-4">
                             <div class="icon-circle rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="bi bi-bicycle"></i>
                             </div>
                         </div>
-                        <h5 class="text-warning">Delivery</h5>
-                        <p class="text-white-50">Pesan antar sampai rumah, daging tetap panas.</p>
+                        <h5 class="text-warning fs-3">Delivery</h5>
+                        <p class="text-white-50 fs-5">Pesan antar sampai rumah, daging tetap panas.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="glass p-4">
-                        <div class="d-flex justify-content-center mb-3">
+                        <div class="d-flex justify-content-center mb-4">
                             <div class="icon-circle rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="bi bi-basket"></i>
                             </div>
                         </div>
-                        <h5 class="text-warning">Take Away</h5>
-                        <p class="text-white-50">Ambil sendiri, gratis soda.</p>
+                        <h5 class="text-warning fs-3">Take Away</h5>
+                        <p class="text-white-50 fs-5">Ambil sendiri, gratis soda.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="glass p-4">
-                        <div class="d-flex justify-content-center mb-3">
+                        <div class="d-flex justify-content-center mb-4">
                             <div class="icon-circle rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="bi bi-cup-straw"></i>
                             </div>
                         </div>
-                        <h5 class="text-warning">Dine In</h5>
-                        <p class="text-white-50">Makan di tempat dengan suasana bakaran asli.</p>
+                        <h5 class="text-warning fs-3">Dine In</h5>
+                        <p class="text-white-50 fs-5">Makan di tempat dengan suasana bakaran asli.</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3">
                     <div class="glass p-4">
-                        <div class="d-flex justify-content-center mb-3">
+                        <div class="d-flex justify-content-center mb-4">
                             <div class="icon-circle rounded-circle d-flex align-items-center justify-content-center">
                                 <i class="bi bi-tree"></i>
                             </div>
                         </div>
-                        <h5 class="text-warning">Outdoor BBQ</h5>
-                        <p class="text-white-50">Catering untuk acara di taman atau pantai.</p>
+                        <h5 class="text-warning fs-3">Outdoor BBQ</h5>
+                        <p class="text-white-50 fs-5">Catering untuk acara di taman atau pantai.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Paling Banyak Dibeli (Menu Favorit) -->
+    <!-- Menu Favorit (paling ludes) -->
     <div class="container-fluid py-5" id="menu">
-        <div class="container">
+        <div class="container container-custom">
             <h2 class="section-title text-center">🔥 Paling Ludes Terbakar</h2>
-            <div class="row g-4 justify-content-center">
-                <!-- Card 1 -->
+            <div class="row g-5">
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=500&auto=format" alt="Beef Ribs">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=700&auto=format" alt="Beef Ribs">
                         <div class="card-body text-center">
                             <h5 class="card-title">Beef Ribs</h5>
-                            <p class="card-text small text-white-50">Iga sapi dengan smoky BBQ sauce.</p>
+                            <p class="card-text">Iga sapi dengan smoky BBQ sauce.</p>
                             <p class="price">Rp 95.000</p>
                         </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=500&auto=format" alt="Chicken Wings">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=700&auto=format" alt="Chicken Wings">
                         <div class="card-body text-center">
                             <h5 class="card-title">Chicken Wings</h5>
-                            <p class="card-text small text-white-50">Sayap ayam dengan saus pedas manis.</p>
+                            <p class="card-text">Sayap ayam dengan saus pedas manis.</p>
                             <p class="price">Rp 40.000</p>
                         </div>
                     </div>
                 </div>
-                <!-- Card 3 -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=500&auto=format" alt="Sosis Bakar">
+                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=700&auto=format" alt="Sosis Bakar">
                         <div class="card-body text-center">
                             <h5 class="card-title">Sosis Bakar</h5>
-                            <p class="card-text small text-white-50">Sosis bratwurst dengan mustard.</p>
+                            <p class="card-text">Sosis bratwurst dengan mustard.</p>
                             <p class="price">Rp 30.000</p>
                         </div>
                     </div>
                 </div>
-                <!-- Card 4 -->
                 <div class="col-sm-6 col-lg-3">
                     <div class="card card-bbq">
-                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=500&auto=format" alt="Tofu BBQ">
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=700&auto=format" alt="Tofu BBQ">
                         <div class="card-body text-center">
                             <h5 class="card-title">Tofu BBQ</h5>
-                            <p class="card-text small text-white-50">Tahu bakar bumbu kecap pedas.</p>
+                            <p class="card-text">Tahu bakar bumbu kecap pedas.</p>
                             <p class="price">Rp 25.000</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-5">
+            <div class="text-center mt-5 pt-3">
                 <button class="btn btn-outline-bbq btn-lg">Lihat Menu Lengkap</button>
             </div>
         </div>
     </div>
 
-    <!-- Testimoni -->
+    <!-- Testimoni (layout desktop lebih lapang) -->
     <div class="container-fluid py-5 testimony" id="testimony">
-        <div class="container">
+        <div class="container container-custom">
             <h2 class="section-title text-center">Apa Kata Pelanggan</h2>
-            <p class="text-center text-white-50 mb-5">Kepuasan membara adalah prioritas kami</p>
+            <p class="text-center text-white-50 mb-5 fs-4">Kepuasan membara adalah prioritas kami</p>
             <div class="row g-4">
-                <!-- Testi 1 -->
                 <div class="col-md-4">
                     <div class="glass testimony-card">
-                        <div class="quote-icon text-warning fs-1">"</div>
-                        <h5 class="text-warning">Igonya juara!</h5>
-                        <div class="author fw-bold">— Andi Bakso</div>
-                        <div class="stars mb-2">
+                        <div class="quote-icon text-warning">"</div>
+                        <h5 class="text-warning fs-3">Igonya juara!</h5>
+                        <div class="author fw-bold fs-5">— Andi Bakso</div>
+                        <div class="stars mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="text-white-50">Iga bakarnya empuk, bumbunya meresap sampai ke tulang. Mantap!</p>
+                        <p class="text-white-50 fs-5">Iga bakarnya empuk, bumbunya meresap sampai ke tulang. Mantap!</p>
                     </div>
                 </div>
-                <!-- Testi 2 -->
                 <div class="col-md-4">
                     <div class="glass testimony-card">
-                        <div class="quote-icon text-warning fs-1">"</div>
-                        <h5 class="text-warning">Sambelnya nampol</h5>
-                        <div class="author fw-bold">— Sarah Pedas</div>
-                        <div class="stars mb-2">
+                        <div class="quote-icon text-warning">"</div>
+                        <h5 class="text-warning fs-3">Sambelnya nampol</h5>
+                        <div class="author fw-bold fs-5">— Sarah Pedas</div>
+                        <div class="stars mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                         </div>
-                        <p class="text-white-50">Ayam bakarnya pedasnya bikin nagih, cocok buat pecinta pedas.</p>
+                        <p class="text-white-50 fs-5">Ayam bakarnya pedasnya bikin nagih, cocok buat pecinta pedas.</p>
                     </div>
                 </div>
-                <!-- Testi 3 -->
                 <div class="col-md-4">
                     <div class="glass testimony-card">
-                        <div class="quote-icon text-warning fs-1">"</div>
-                        <h5 class="text-warning">Delivery cepat</h5>
-                        <div class="author fw-bold">— Budi Doremi</div>
-                        <div class="stars mb-2">
+                        <div class="quote-icon text-warning">"</div>
+                        <h5 class="text-warning fs-3">Delivery cepat</h5>
+                        <div class="author fw-bold fs-5">— Budi Doremi</div>
+                        <div class="stars mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="text-white-50">Pesanan datang 30 menit, masih panas. Recomended!</p>
+                        <p class="text-white-50 fs-5">Pesanan datang 30 menit, masih panas. Recomended!</p>
                     </div>
                 </div>
-                <!-- Testi 4 -->
                 <div class="col-md-4">
                     <div class="glass testimony-card">
-                        <div class="quote-icon text-warning fs-1">"</div>
-                        <h5 class="text-warning">Tempatnya cozy</h5>
-                        <div class="author fw-bold">— Caca Marica</div>
-                        <div class="stars mb-2">
+                        <div class="quote-icon text-warning">"</div>
+                        <h5 class="text-warning fs-3">Tempatnya cozy</h5>
+                        <div class="author fw-bold fs-5">— Caca Marica</div>
+                        <div class="stars mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
                         </div>
-                        <p class="text-white-50">Suasananya enak, bisa lihat langsung proses bakaran.</p>
+                        <p class="text-white-50 fs-5">Suasananya enak, bisa lihat langsung proses bakaran.</p>
                     </div>
                 </div>
-                <!-- Testi 5 -->
                 <div class="col-md-4">
                     <div class="glass testimony-card">
-                        <div class="quote-icon text-warning fs-1">"</div>
-                        <h5 class="text-warning">Saus BBQ rahasia</h5>
-                        <div class="author fw-bold">— Rizki </div>
-                        <div class="stars mb-2">
+                        <div class="quote-icon text-warning">"</div>
+                        <h5 class="text-warning fs-3">Saus BBQ rahasia</h5>
+                        <div class="author fw-bold fs-5">— Rizki</div>
+                        <div class="stars mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                         </div>
-                        <p class="text-white-50">Tekstur dagingnya lembut banget, nggak capek ngunyah. Bumbunya meresap sampai ke dalam, bener-bener comfort food!</p>
+                        <p class="text-white-50 fs-5">Tekstur dagingnya lembut banget, bumbu meresap sampai dalam.</p>
                     </div>
                 </div>
-                <!-- Testi 6 -->
                 <div class="col-md-4">
                     <div class="glass testimony-card">
-                        <div class="quote-icon text-warning fs-1">"</div>
-                        <h5 class="text-warning">Porsinya gede</h5>
-                        <div class="author fw-bold">— Melati</div>
-                        <div class="stars mb-2">
+                        <div class="quote-icon text-warning">"</div>
+                        <h5 class="text-warning fs-3">Porsinya gede</h5>
+                        <div class="author fw-bold fs-5">— Melati</div>
+                        <div class="stars mb-3">
                             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                         </div>
-                        <p class="text-white-50">Seporsi bisa untuk berdua, worth it banget!</p>
+                        <p class="text-white-50 fs-5">Seporsi bisa untuk berdua, worth it banget!</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Reservasi -->
+    <!-- Reservasi Meja -->
     <div class="container-fluid py-5" id="reservasi">
-        <div class="container">
+        <div class="container container-custom">
             <h2 class="section-title text-center">Reservasi Meja Bakar</h2>
-            <p class="text-center text-white-50 mb-5">Jangan sampai kehabisan tempat, pesan sekarang!</p>
+            <p class="text-center text-white-50 mb-5 fs-4">Pesan tempat sekarang, grilled experience menanti</p>
             <div class="row justify-content-center">
-                <div class="col-md-6 glass p-5">
+                <div class="col-md-7 col-lg-6 glass p-5">
                     <div class="mb-4">
-                        <label class="form-label text-warning">Nama</label>
+                        <label class="form-label text-warning fs-5">Nama Lengkap</label>
                         <input type="text" class="form-control form-control-bbq" placeholder="Masukkan nama">
                     </div>
                     <div class="mb-4">
-                        <label class="form-label text-warning">No. Kontak</label>
+                        <label class="form-label text-warning fs-5">No. Kontak</label>
                         <input type="text" class="form-control form-control-bbq" placeholder="+62 ...">
                     </div>
                     <div class="mb-4">
-                        <label class="form-label text-warning">Jumlah Meja</label>
+                        <label class="form-label text-warning fs-5">Jumlah Meja</label>
                         <input type="number" class="form-control form-control-bbq" placeholder="Contoh: 2">
                     </div>
                     <div class="mb-4">
-                        <label class="form-label text-warning">Tanggal</label>
+                        <label class="form-label text-warning fs-5">Tanggal</label>
                         <input type="date" class="form-control form-control-bbq">
                     </div>
                     <div class="d-grid">
-                        <button class="btn btn-bbq py-3">🔥 Reservasi Sekarang</button>
+                        <button class="btn btn-bbq py-3 fs-4">🔥 Reservasi Sekarang</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer + newsletter -->
     <div class="container-fluid py-5 footer">
-        <div class="container">
-            <h5 class="text-center text-warning mb-4">Temui Kami di Sosmed</h5>
+        <div class="container container-custom">
+            <h5 class="text-center text-warning mb-4 fs-2">Temui Kami di Sosmed</h5>
             <div class="d-flex justify-content-center mb-5 gap-5">
                 <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
                 <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
                 <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
             </div>
-            <h5 class="text-center text-warning mb-2">Subscribe</h5>
-            <p class="text-center text-white-50 mb-4">Dapatkan promo terbaru via email</p>
+            <h5 class="text-center text-warning mb-3 fs-3">Subscribe</h5>
+            <p class="text-center text-white-50 mb-4 fs-5">Dapatkan promo terbaru via email</p>
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="input-group">
                         <input type="email" class="form-control form-control-bbq" placeholder="Ketikkan Email">
-                        <button class="btn btn-bbq">Subscribe</button>
+                        <button class="btn btn-bbq px-4">Subscribe</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="bg-black text-light py-4" style="background: rgba(0,0,0,0.9) !important;">
-        <div class="container">
+    <!-- Footer bawah -->
+    <footer class="bg-black text-light py-4" style="background: rgba(0,0,0,0.95) !important;">
+        <div class="container container-custom">
             <div class="row text-center text-md-start">
                 <div class="col-md-4 mb-3">
-                    <h5 class="text-warning fw-bold">BBQ PARADISE</h5>
+                    <h5 class="text-warning fw-bold fs-3">BBQ PARADISE</h5>
                     <p class="text-white-50 small">Tempat bakaran kekinian dengan konsep transparan dan rasa membara.</p>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <h6 class="fw-bold text-warning">Navigasi</h6>
+                    <h6 class="fw-bold text-warning fs-4">Navigasi</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50 text-decoration-none">Home</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Produk</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Promo</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Reservasi</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none fs-5">Home</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none fs-5">Produk</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none fs-5">Promo</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none fs-5">Reservasi</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h6 class="fw-bold text-warning">Kontak</h6>
+                    <h6 class="fw-bold text-warning fs-4">Kontak</h6>
                     <ul class="list-unstyled text-white-50 small">
-                        <li><i class="bi bi-geo-alt-fill me-2"></i>Jl. di Bakar No. 99, mekkah</li>
-                        <li><i class="bi bi-telephone-fill me-2"></i>+62 812 8888 7777</li>
-                        <li><i class="bi bi-envelope-fill me-2"></i>bbqparade@email.com</li>
+                        <li class="fs-5"><i class="bi bi-geo-alt-fill me-2"></i>Jl. Bakar No. 99, Jakarta</li>
+                        <li class="fs-5"><i class="bi bi-telephone-fill me-2"></i>+62 812 8888 7777</li>
+                        <li class="fs-5"><i class="bi bi-envelope-fill me-2"></i>bbqparadise@email.com</li>
                     </ul>
                 </div>
             </div>
             <hr class="border-warning">
-            <p class="text-center text-white-50 small mb-0">&copy; 2025 BBQ Paramount. All Rights Reserved.</p>
+            <p class="text-center text-white-50 small mb-0">&copy; 2025 BBQ Paradise. All Rights Reserved. (Desktop optimized)</p>
         </div>
     </footer>
 
     <script src="bootstrap-5.0.0-dist/js/bootstrap.bundle.min.js"></script>
-    
     <script>
+        // Smooth scroll untuk anchor link
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
